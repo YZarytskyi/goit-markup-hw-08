@@ -1,0 +1,41 @@
+.features__container {
+  display: flex;
+  text-align: left;
+}
+
+.features__list {
+  display: flex;
+  gap: 30px;
+}
+
+.features__item {
+  width: 270px;
+}
+
+.features__icons {
+  width: 270px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  background-color: var(--background-color-secondary);
+  border-radius: 4px;
+}
+
+.features__icons-item {
+  width: 70px;
+  height: 70px;
+}
+
+.features__subtitle {
+  color: var(--color-text-secondary);
+  font-weight: 700;
+  font-size: inherit;
+  line-height: 1.14;
+}
+
+.features__description {
+  margin-top: 10px;
+  line-height: 171%;
+}
