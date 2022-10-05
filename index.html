@@ -22,6 +22,89 @@
           <a lang="en" href="./index.html" class="header__logo logo"
             >Web<span>Studio</span></a
           >
+
+          <button
+            type="button"
+            class="mobile__button js-open-menu"
+            aria-expanded="false"
+            aria-controls="menu-container"
+          >
+            <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+              <use
+                class="icon__menu"
+                href="./images/icons.svg#icon-menu_open"
+              ></use>
+            </svg>
+          </button>
+
+          <div class="mobile js-menu-container" id="menu-container">
+            <div class="mobile__container">
+              <button
+                type="button"
+                class="mobile__button-close js-close-menu"
+                aria-expanded="false"
+              >
+                <svg
+                  class="menu__icon-close"
+                  width="40"
+                  height="40"
+                  aria-label="Перемикач мобільного меню"
+                >
+                  <use
+                    class="icon__cross"
+                    href="./images/icons.svg#icon-menu_close"
+                  ></use>
+                </svg>
+              </button>
+              <nav class="mobile__nav">
+                <ul class="mobile__list">
+                  <li class="mobile__item">
+                    <a class="mobile__link mobile__current" href="index.html "
+                      >Студія</a
+                    >
+                  </li>
+                  <li class="mobile__item">
+                    <a class="mobile__link" href="portfolio.html">Портфоліо</a>
+                  </li>
+                  <li class="mobile__item">
+                    <a class="mobile__link" href="#">Контакти</a>
+                  </li>
+                </ul>
+
+                <ul class="mobile__phone-email">
+                  <li class="mobile__phone">
+                    <a class="mobile__phone-link" href="tel:+380961111111"
+                      >+38 096 111 11 11</a
+                    >
+                  </li>
+                  <li class="mobile__email">
+                    <a
+                      class="mobile__email-link"
+                      href="mailto:info@devstudio.com"
+                    >
+                      info@devstudio.com
+                    </a>
+                  </li>
+                </ul>
+
+                <ul class="mobile__social">
+                  <li class="mobile__social-item">
+                    <a class="mobile__social-link" href="#">Instagram</a>
+                  </li>
+                  <li class="mobile__social-item">
+                    <a class="mobile__social-link" href="#">Twitter</a>
+                  </li>
+                  <li class="mobile__social-item">
+                    <a class="mobile__social-link" href="#">Facebook</a>
+                  </li>
+                  <li class="mobile__social-item">
+                    <a class="mobile__social-link" href="#">LinkedIn</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
           <ul class="header__list">
             <li>
               <a href="./index.html" class="header__item header__current"
@@ -58,7 +141,7 @@
     </header>
     <main>
       <section class="hero">
-        <h1 class="hero__title">Ефективні рішення для<br />вашого бізнесу</h1>
+        <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
         <button type="button" class="hero__btn" data-modal-open>
           Замовити послугу
         </button>
@@ -123,28 +206,46 @@
           <ul class="activities__list">
             <li class="activities__item">
               <img
-                src="./images/activity-1.jpg"
+                class="team-avatar"
+                srcset="
+                  ./images/activities/activity1.jpg    1x,
+                  ./images/activities/activity1@2x.jpg 2x
+                "
+                src="./images/activities/activity1.jpg"
                 alt="Людина працює за комп'ютером"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="activities__text">Десктопні додатки</p>
             </li>
             <li class="activities__item">
               <img
-                src="./images/activity-2.jpg"
+                class="team-avatar"
+                srcset="
+                  ./images/activities/activity2.jpg    1x,
+                  ./images/activities/activity2@2x.jpg 2x
+                "
+                src="./images/activities/activity2.jpg"
                 alt="Людина за ноутбуком та з телефоном в руці"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="activities__text">Мобільні додатки</p>
             </li>
             <li class="activities__item">
               <img
-                src="./images/activity-3.jpg"
+                class="team-avatar"
+                srcset="
+                  ./images/activities/activity3.jpg    1x,
+                  ./images/activities/activity3@2x.jpg 2x
+                "
+                src="./images/activities/activity3.jpg"
                 alt="Людина з планшетом"
                 width="370"
                 height="294"
+                loading="lazy"
               />
               <p class="activities__text">Дизайнерські рішення</p>
             </li>
@@ -157,10 +258,18 @@
           <ul class="team__list">
             <li class="team__item">
               <img
-                src="./images/team-1.jpg"
+                srcset="
+                  ./images/team/team1-270.jpg    270w,
+                  ./images/team/team1-354.jpg    354w,
+                  ./images/team/team1-450.jpg    450w,
+                  ./images/team/team1-270@2x.jpg 540w,
+                  ./images/team/team1-354@2x.jpg 708w,
+                  ./images/team/team1-450@2x.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/team1-354.jpg 354w"
                 alt="Дизайнер в окулярах посміхається"
-                width="270"
-                height="260"
+                loading="lazy"
               />
               <h3 class="team__subtitle">Ігор Дем'яненко</h3>
               <p class="team__description" lang="en">Product Designer</p>
@@ -201,10 +310,18 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team-2.jpg"
+                srcset="
+                  ./images/team/team2-270.jpg    270w,
+                  ./images/team/team2-354.jpg    354w,
+                  ./images/team/team2-450.jpg    450w,
+                  ./images/team/team2-270@2x.jpg 540w,
+                  ./images/team/team2-354@2x.jpg 708w,
+                  ./images/team/team2-450@2x.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/team2-354.jpg 354w"
                 alt="Розробник в окулярах посміхається"
-                width="270"
-                height="260"
+                loading="lazy"
               />
               <h3 class="team__subtitle">Ольга Рєпіна</h3>
               <p class="team__description" lang="en">Frontend Developer</p>
@@ -245,10 +362,18 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team-3.jpg"
+                srcset="
+                  ./images/team/team3-270.jpg    270w,
+                  ./images/team/team3-354.jpg    354w,
+                  ./images/team/team3-450.jpg    450w,
+                  ./images/team/team3-270@2x.jpg 540w,
+                  ./images/team/team3-354@2x.jpg 708w,
+                  ./images/team/team3-450@2x.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/team3-354.jpg 354w"
                 alt="Маркетолог посміхається"
-                width="270"
-                height="260"
+                loading="lazy"
               />
               <h3 class="team__subtitle">Микола Тарасов</h3>
               <p class="team__description" lang="en">Marketing</p>
@@ -289,10 +414,18 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/team-4.jpg"
+                srcset="
+                  ./images/team/team4-270.jpg    270w,
+                  ./images/team/team4-354.jpg    354w,
+                  ./images/team/team4-450.jpg    450w,
+                  ./images/team/team4-270@2x.jpg 540w,
+                  ./images/team/team4-354@2x.jpg 708w,
+                  ./images/team/team4-450@2x.jpg 900w
+                "
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 100vw"
+                src="./images/team/team4-354.jpg 354w"
                 alt="Веб-дизайнер в окулярах"
-                width="270"
-                height="260"
+                loading="lazy"
               />
               <h3 class="team__subtitle">Михайло Єрмаков</h3>
               <p class="team__description" lang="en">UI Designer</p>
@@ -336,7 +469,7 @@
       </section>
       <section class="clients section">
         <div class="clients__container container">
-          <h2 class="clients__title">Постійні клієнти</h2>
+          <h2 class="section__title">Постійні клієнти</h2>
           <ul class="clients__list">
             <li class="clients__item">
               <a class="clients__link" href="">
@@ -513,16 +646,25 @@
 
           <label class="modal__form-checkbox">
             <input type="checkbox" name="isAgree" class="modal__checkbox" />
-            <svg class="modal__checkbox-icon">
+            <svg class="modal__checkbox-icon" width="16" height="15">
               <use href="./images/icons.svg#icon-check"></use>
             </svg>
-            Погоджуюся з розсилкою та приймаю
-            <a href="" class="modal__policy-link">Умови договору</a>
+            <span>
+              Погоджуюся з розсилкою та приймаю
+              <a href="" class="modal__policy-link">Умови договору</a>
+            </span>
           </label>
           <button type="submit" class="modal__form-btn btn">Відправити</button>
         </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

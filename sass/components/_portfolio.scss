@@ -1,8 +1,23 @@
 .portfolio__list-btn {
   display: flex;
-  justify-content: center;
+  justify-content: left;
+  flex-wrap: wrap;
   gap: 8px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
+  padding-right: 12px;
+
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    padding-right: 124px;
+  }
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio__btn {
@@ -29,16 +44,28 @@
 
 .projects {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px;
 }
 
-.projects_item {
-  width: calc((1170px - 60px) / 3);
+.projects__item {
+  @media screen and (min-width: 480px) {
+    width: calc(480px - 30px);
+  }
+  
+  @media screen and (min-width: 768px) {
+    width: calc((768px - 30px * 2) / 2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: calc((1200px - 30px * 3) / 3);;
+  }
 }
 
 .projects__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
@@ -67,7 +94,7 @@
   background-color: rgba(33, 150, 243, 0.9);
   font-size: 18px;
   line-height: 156%;
-  transform: translateY(100%);
+  transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -77,6 +104,7 @@
 }
 
 .projects__title-description {
+  flex-grow: 1;
   padding: 20px 24px;
   border: 1px solid #eeeeee;
   border-top: none;
