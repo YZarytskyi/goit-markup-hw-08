@@ -23,10 +23,9 @@
     column-gap: 178px;
     padding: 0 88px;
   }
-
-
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
+    gap: 0;
   }
 }
 

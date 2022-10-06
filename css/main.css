@@ -192,15 +192,18 @@ body.no-scroll {
 .header__contacts {
   display: none;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1200px) {
   .header__contacts {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    font-size: 12px;
+    line-height: 1.1666666667;
   }
 }
 @media screen and (min-width: 1200px) {
   .header__contacts {
+    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 30px;
@@ -459,19 +462,14 @@ body.no-scroll {
   }
 }
 
-@media screen and (min-width: 480px) {
-  .features__item {
-    width: 450px;
-  }
-}
 @media screen and (min-width: 768px) {
   .features__item {
-    width: 354px;
+    width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .features__item {
-    width: 270px;
+    width: calc((100% - 90px) / 4);
   }
 }
 
@@ -570,19 +568,14 @@ body.no-scroll {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-@media screen and (min-width: 480px) {
-  .team__item {
-    width: 450px;
-  }
-}
 @media screen and (min-width: 768px) {
   .team__item {
-    width: 354px;
+    width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .team__item {
-    width: 270px;
+    width: calc((100% - 90px) / 4);
     padding-bottom: 30px;
   }
 }
@@ -658,12 +651,12 @@ body.no-scroll {
 }
 @media screen and (min-width: 768px) {
   .clients__item {
-    width: 226px;
+    width: calc((100% - 60px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
   .clients__item {
-    width: 170px;
+    width: calc((100% - 150px) / 6);
   }
 }
 
@@ -697,7 +690,7 @@ body.no-scroll {
   margin-bottom: 40px;
   padding-right: 12px;
 }
-@media screen and (min-width: 480px) and (max-width: 768px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .portfolio__list-btn {
     padding-right: 124px;
   }
@@ -738,19 +731,14 @@ body.no-scroll {
   gap: 30px;
 }
 
-@media screen and (min-width: 480px) {
-  .projects__item {
-    width: 450px;
-  }
-}
 @media screen and (min-width: 768px) {
   .projects__item {
-    width: 354px;
+    width: calc((100% - 30px) / 2);
   }
 }
 @media screen and (min-width: 1200px) {
   .projects__item {
-    width: 370px;
+    width: calc((100% - 60px) / 3);
   }
 }
 
@@ -848,6 +836,7 @@ body.no-scroll {
 @media screen and (min-width: 1200px) {
   .footer__container {
     flex-wrap: nowrap;
+    gap: 0;
   }
 }
 

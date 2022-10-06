@@ -6,7 +6,7 @@
   margin-bottom: 40px;
   padding-right: 12px;
 
-  @media screen and (min-width: 480px) and (max-width: 768px) {
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     padding-right: 124px;
   }
 
@@ -49,16 +49,12 @@
 }
 
 .projects__item {
-  @media screen and (min-width: 480px) {
-    width: calc(480px - 30px);
-  }
-  
   @media screen and (min-width: 768px) {
-    width: calc((768px - 30px * 2) / 2);
+    width: calc((100% - 30px) / 2);
   }
 
   @media screen and (min-width: 1200px) {
-    width: calc((1200px - 30px * 3) / 3);;
+    width: calc((100% - 30px * 2) / 3);;
   }
 }
 
